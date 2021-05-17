@@ -1,0 +1,11 @@
+--- /home/openwrt/sdk/staging_dir/host/bin/automake-1.15.old	2021-05-16 17:30:37.480000000 +0000
++++ /home/openwrt/sdk/staging_dir/host/bin/automake-1.15	2021-05-16 17:31:24.930000000 +0000
+@@ -3935,7 +3935,7 @@
+ sub substitute_ac_subst_variables
+ {
+   my ($text) = @_;
+-  $text =~ s/\${([^ \t=:+{}]+)}/substitute_ac_subst_variables_worker ($1)/ge;
++  $text =~ s/\$\{([^ \t=:+\{\}]+)\}/substitute_ac_subst_variables_worker ($1)/ge;
+   return $text;
+ }
+ 
